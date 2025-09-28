@@ -1,63 +1,123 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import CoverPhoto from '../assets/CoverPhoto.png';
 import Layout from '../layouts/BlogPost.astro';
+import JobExperience from '../components/Experience.astro';
 ---
 
 <Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
+  title="About Me"
+  description="Lorem ipsum dolor sit amet"
+  pubDate={new Date('August 08 2021')}
+  heroImage={CoverPhoto}
 >
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+  <p>
+    Hi, I'm Jordyn O'Brien! I'm a fifth year Computer Engineering student at the Memorial University of Newfoundland. I am planning to persue a Master's degree in the field of 
+    Computer Security. Outside of school I enjoy running, travelling, cooking, baking and reading!
+  </p>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+	<section class="mt-6">
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+	<h3 class="text-xl font-semibold mb-2">Work Experience</h3>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+	<JobExperience
+		role="Software Developer Intern"
+		company="Avalon Holographics"
+		companyUrl = "https://avalonholographics.com/"
+		city="St. John's, NL"
+		date="Sep 2023 – Dec 2023, Sep 2025 - Present"
+		description="Avalon Holographics is building the world's more advanced holographic displays. I am currently on my second work term with the company as a member of their software team. Throughout my time there I have worked on house made applications for the holographic displays including simulators for the defence and medical industry, and video games!"
+	/>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+	<JobExperience
+		role="Full Stack Developer"
+		company="FliteX"
+		companyUrl = "https://ca.linkedin.com/company/flitex"
+		city="Remote/Toronto, ON"
+		date="Jan 2025 - Apr 2025"
+		description="FliteX is a start-up building different software applications for the airline industry. While I worked there I was able to work on applications related to flight safety and route optimization. I mentored two interns by helping them gain real-world front-end development experience. I also led sprint planning meetings and coordinating meetings with customers."
+	/>
+
+	<JobExperience
+		role="Research/Software Development Intern"
+		company="Communications Research Centre (CRC)"
+		companyUrl = "https://ised-isde.canada.ca/site/communications-research-centre-canada/en"
+		city="Ottawa, ON"
+		date="May 2024 - Aug 2024"
+		description="While working at the CRC I assisted researchers by developing a web application to visualize interference patterns in 5G networks. This was apart of project related to making better use of the available spectrum for wireless communications."
+	/>
+
+	<JobExperience
+		role="Network Speacialist Intern"
+		company="Bell"
+		companyUrl = "https://www.bell.ca/"
+		city="St. John's, NL"
+		date="Jan 2023 - May 2023"
+		description="During my time at Bell I was a memeber of their Access Engineering team whose work involved expanding Bell's fibre optic internet network into underserved rural communities in Newfoundland and Labrador. Some of my work included writing scripts to sort customer addresses, upgrading an application to be compatible with 32-bit and 64-bit devices and automating data entry."
+	/>
+
+	</section>
+
+	<section style="padding-top:48px">
+
+	
+	<h3 class="text-xl font-semibold mb-2">Extracurriculars</h3>
+
+	<JobExperience
+		role="Software Team Lead"
+		company="Iceberg ASV"
+		companyUrl = "https://www.icebergasv.ca"
+		city="Student Design Team @ MUN"
+		date="June 2023 - Present"
+		description="Iceberg is a student design team at MUN that designs and builds an autonomous surface vehicle. I am currently the software team lead, where I lead other team memebers through the development of our ROS2 code to automate the mouvement of the boat! In the past I have attended competions with the team in Norway and Florida!"
+	/>
+	<JobExperience
+		role="Volunteer"
+		company="Girls Who Game"
+		city="Dell Technologies"
+		companyUrl = "https://www.dell.com/en-ca/lp/dt/girls-who-game"
+		date="Sep 2023 - Present"
+		description="Girls Who Game is program hosted by Dell Technologies aiming to empower young girls accross North America to persue STEM related fields. I occasionally volunteer with the program as I feel like it's a program I would have loved to be apart of as a kid and I try to do what I can to encourage more women to consider STEM."
+	/>
+	<JobExperience
+		role="Grad Commitee Memeber"
+		company="Engineering Class of 2026"
+		city="MUN"
+		date="Jan 2025 - Present"
+		description="I am a memeber of my classe's graduation commitee. Myself and the rest of the commitee plan and coordinate gradution related events including the iron ring ceremony and celebration gala. We also coordinate social events and fundraisers for the class."
+	/>
+
+
+	</section>
+
+	
+	<section style="padding-top:48px">
+
+	<h3 class="text-xl font-semibold mb-2">Projects</h3>
+
+	<JobExperience
+		role="Software Team Lead"
+		company="Iceberg ASV"
+		companyUrl = "https://www.icebergasv.ca"
+		city="Student Design Team @ MUN"
+		date="June 2023 - Present"
+		description="Iceberg is a student design team at MUN that designs and builds an autonomous surface vehicle. I am currently the software team lead, where I lead other team memebers through the development of our ROS2 code to automate the mouvement of the boat! In the past I have attended competions with the team in Norway and Florida!"
+	/>
+	<JobExperience
+		role="Volunteer"
+		company="Girls Who Game"
+		city="Dell Technologies"
+		companyUrl = "https://www.dell.com/en-ca/lp/dt/girls-who-game"
+		date="Sep 2023 - Present"
+		description="Girls Who Game is program hosted by Dell Technologies aiming to empower young girls accross North America to persue STEM related fields. I occasionally volunteer with the program as I feel like it's a program I would have loved to be apart of as a kid and I try to do what I can to encourage more women to consider STEM."
+	/>
+	<JobExperience
+		role="Grad Commitee Memeber"
+		company="Engineering Class of 2026"
+		city="MUN"
+		date="Jan 2025 - Present"
+		description="I am a memeber of my classe's graduation commitee. Myself and the rest of the commitee plan and coordinate gradution related events including the iron ring ceremony and celebration gala. We also coordinate social events and fundraisers for the class."
+	/>
+	</section>
+
+
 </Layout>

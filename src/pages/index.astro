@@ -3,46 +3,164 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import CoverPhoto from '../assets/CoverPhoto.png';
+import Layout from '../layouts/BlogPost.astro';
+import JobExperience from '../components/Experience.astro';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.hero-image {
+				width: 100%;
+			}
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+			}
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0 auto;
+			}
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+
+			<div class="hero-image mb-8">
+        		<img src={CoverPhoto.src} alt="Cover photo" />
+      		</div>
+
+			<div class="prose">
+
+			<div class="title" style="text-align: center;">
+				<h1>About me</h1>
+			<hr />
+			</div>
+
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				Hi, I'm Jordyn O'Brien! I'm a fifth year Computer Engineering student at the Memorial University of Newfoundland. I am now planning to persue a Master's degree in the field of 
+				Computer Security. Outside of school I enjoy running, travelling and reading. 
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+
+				<section style="padding-top:48px">
+
+				<h3 class="text-xl font-semibold mb-2">Work Experience</h3>
+
+				<JobExperience
+					role="Software Developer Intern"
+					company="Avalon Holographics"
+					companyUrl = "https://avalonholographics.com/"
+					city="St. John's, NL"
+					date="Sep 2023 – Dec 2023, Sep 2025 - Present"
+					description="Avalon Holographics is building the world's more advanced holographic displays. I am currently on my second work term with the company as a member of their software team. Throughout my time there I have worked on house made applications for the holographic displays including simulators for the defence and medical industry, and video games!"
+				/>
+
+				<JobExperience
+					role="Full Stack Developer"
+					company="FliteX"
+					companyUrl = "https://ca.linkedin.com/company/flitex"
+					city="Remote/Toronto, ON"
+					date="Jan 2025 - Apr 2025"
+					description="FliteX is a start-up building different software applications for the airline industry. While I worked there I was able to work on applications related to flight safety and route optimization. I mentored two interns by helping them gain real-world front-end development experience. I also led sprint planning meetings and coordinating meetings with customers."
+				/>
+
+				<JobExperience
+					role="Research/Software Development Intern"
+					company="Communications Research Centre (CRC)"
+					companyUrl = "https://ised-isde.canada.ca/site/communications-research-centre-canada/en"
+					city="Ottawa, ON"
+					date="May 2024 - Aug 2024"
+					description="While working at the CRC I assisted researchers by developing a web application to visualize interference patterns in 5G networks. This was apart of project related to making better use of the available spectrum for wireless communications."
+				/>
+
+				<JobExperience
+					role="Network Speacialist Intern"
+					company="Bell"
+					companyUrl = "https://www.bell.ca/"
+					city="St. John's, NL"
+					date="Jan 2023 - May 2023"
+					description="During my time at Bell I was a memeber of their Access Engineering team whose work involved expanding Bell's fibre optic internet network into underserved rural communities in Newfoundland and Labrador. Some of my work included writing scripts to sort customer addresses, upgrading an application to be compatible with 32-bit and 64-bit devices and automating data entry."
+				/>
+
+				</section>
+
+				<section style="padding-top:48px">
+
+				
+				<h3 class="text-xl font-semibold mb-2">Extracurriculars</h3>
+
+				<JobExperience
+					role="Software Team Lead"
+					company="Iceberg ASV"
+					companyUrl = "https://www.icebergasv.ca"
+					city="Student Design Team @ MUN"
+					date="June 2023 - Present"
+					description="Iceberg is a student design team at MUN that designs and builds an autonomous surface vehicle. I am currently the software team lead, where I lead other team memebers through the development of our ROS2 code to automate the mouvement of the boat! In the past I have attended competions with the team in Norway and Florida!"
+				/>
+				<JobExperience
+					role="Volunteer"
+					company="Girls Who Game"
+					city="Dell Technologies"
+					companyUrl = "https://www.dell.com/en-ca/lp/dt/girls-who-game"
+					date="Sep 2023 - Present"
+					description="Girls Who Game is program hosted by Dell Technologies aiming to empower young girls accross North America to persue STEM related fields. I occasionally volunteer with the program as I feel like it's a program I would have loved to be apart of as a kid and I try to do what I can to encourage more women to consider STEM."
+				/>
+				<JobExperience
+					role="Grad Commitee Memeber"
+					company="Engineering Class of 2026"
+					city="MUN"
+					date="Jan 2025 - Present"
+					description="I am a memeber of my classe's graduation commitee. Myself and the rest of the commitee plan and coordinate gradution related events including the iron ring ceremony and celebration gala. We also coordinate social events and fundraisers for the class."
+				/>
+
+
+				</section>
+
+				<section style="padding-top:48px">
+
+				<h3 class="text-xl font-semibold mb-2">Projects</h3>
+
+				<JobExperience
+					role="Indoor Asset Tracking for Hospital Environments"
+					company="Capston"
+					companyUrl = "https://www.icebergasv.ca"
+					city="Student Design Team @ MUN"
+					date="June 2023 - Present"
+					description="Iceberg is a student design team at MUN that designs and builds an autonomous surface vehicle. I am currently the software team lead, where I lead other team memebers through the development of our ROS2 code to automate the mouvement of the boat! In the past I have attended competions with the team in Norway and Florida!"
+				/>
+				<JobExperience
+					role="Volunteer"
+					company="Girls Who Game"
+					city="Dell Technologies"
+					companyUrl = "https://www.dell.com/en-ca/lp/dt/girls-who-game"
+					date="Sep 2023 - Present"
+					description="Girls Who Game is program hosted by Dell Technologies aiming to empower young girls accross North America to persue STEM related fields. I occasionally volunteer with the program as I feel like it's a program I would have loved to be apart of as a kid and I try to do what I can to encourage more women to consider STEM."
+				/>
+				<JobExperience
+					role="Grad Commitee Memeber"
+					company="Engineering Class of 2026"
+					city="MUN"
+					date="Jan 2025 - Present"
+					description="I am a memeber of my classe's graduation commitee. Myself and the rest of the commitee plan and coordinate gradution related events including the iron ring ceremony and celebration gala. We also coordinate social events and fundraisers for the class."
+				/>
+				</section>
+
+
+		</div>
 		</main>
 		<Footer />
 	</body>
