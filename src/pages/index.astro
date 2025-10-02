@@ -6,6 +6,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import CoverPhoto from '../assets/CoverPhoto.png';
 import Layout from '../layouts/BlogPost.astro';
 import JobExperience from '../components/Experience.astro';
+import Project from '../components/Project.astro';
 ---
 
 <!doctype html>
@@ -52,8 +53,8 @@ import JobExperience from '../components/Experience.astro';
 			</div>
 
 			<p>
-				Hi, I'm Jordyn O'Brien! I'm a fifth year Computer Engineering student at the Memorial University of Newfoundland. I am now planning to persue a Master's degree in the field of 
-				Computer Security. Outside of school I enjoy running, travelling and reading. 
+				Hi, I'm Jordyn O'Brien! I'm a fifth year Computer Engineering Co-op student at the Memorial University of Newfoundland. I am now planning to persue a Master's degree in the field of 
+				Computer Security. Outside of school I enjoy running, travelling, reading, cooking and baking!
 			</p>
 
 				<section style="padding-top:48px">
@@ -75,7 +76,7 @@ import JobExperience from '../components/Experience.astro';
 					companyUrl = "https://ca.linkedin.com/company/flitex"
 					city="Remote/Toronto, ON"
 					date="Jan 2025 - Apr 2025"
-					description="FliteX is a start-up building different software applications for the airline industry. While I worked there I was able to work on applications related to flight safety and route optimization. I mentored two interns by helping them gain real-world front-end development experience. I also led sprint planning meetings and coordinating meetings with customers."
+					description="FliteX is a start-up that builds software applications for the airline industry. While I worked there I was able to work on applications related to flight safety and route optimization. I mentored two interns by helping them gain real-world front-end development experience. I also led sprint planning meetings and coordinated meetings with customers."
 				/>
 
 				<JobExperience
@@ -109,7 +110,7 @@ import JobExperience from '../components/Experience.astro';
 					companyUrl = "https://www.icebergasv.ca"
 					city="Student Design Team @ MUN"
 					date="June 2023 - Present"
-					description="Iceberg is a student design team at MUN that designs and builds an autonomous surface vehicle. I am currently the software team lead, where I lead other team memebers through the development of our ROS2 code to automate the mouvement of the boat! In the past I have attended competions with the team in Norway and Florida!"
+					description="Iceberg is a student design team at MUN that designs and builds an autonomous surface vehicle. I am currently the software team lead, where I lead other team memebers through the development of our ROS2 code to automate the mouvement of the boat! In the past I have attended competitions with the team in Norway and Florida!"
 				/>
 				<JobExperience
 					role="Volunteer"
@@ -126,36 +127,28 @@ import JobExperience from '../components/Experience.astro';
 					date="Jan 2025 - Present"
 					description="I am a memeber of my classe's graduation commitee. Myself and the rest of the commitee plan and coordinate gradution related events including the iron ring ceremony and celebration gala. We also coordinate social events and fundraisers for the class."
 				/>
-
-
 				</section>
 
 				<section style="padding-top:48px">
 
 				<h3 class="text-xl font-semibold mb-2">Projects</h3>
 
-				<JobExperience
-					role="Indoor Asset Tracking for Hospital Environments"
-					company="Capston"
-					companyUrl = "https://www.icebergasv.ca"
-					city="Student Design Team @ MUN"
-					date="June 2023 - Present"
-					description="Iceberg is a student design team at MUN that designs and builds an autonomous surface vehicle. I am currently the software team lead, where I lead other team memebers through the development of our ROS2 code to automate the mouvement of the boat! In the past I have attended competions with the team in Norway and Florida!"
+				<Project
+				name="Indoor Asset Tracking for Hospital Environments"
+				subtitle="Capstone Project"
+				description="Myself and two other students are developing an indoor asset tracking system for use in hospital and care environements. The system uses BLE nodes for tracking and I am developing a web application to display tracking data."
 				/>
-				<JobExperience
-					role="Volunteer"
-					company="Girls Who Game"
-					city="Dell Technologies"
-					companyUrl = "https://www.dell.com/en-ca/lp/dt/girls-who-game"
-					date="Sep 2023 - Present"
-					description="Girls Who Game is program hosted by Dell Technologies aiming to empower young girls accross North America to persue STEM related fields. I occasionally volunteer with the program as I feel like it's a program I would have loved to be apart of as a kid and I try to do what I can to encourage more women to consider STEM."
+				<Project
+				name="Analyzing the Use of Concurrency in Dictionary Attacks"
+				subtitle="Concurrent Programming Final Project"
+				url="https://github.com/jordyob03/ConcurrentAttacks"
+				description="For my final project in my concurrent programming course I decided to analyze how parallel programming can speed up dictionary attacks. The project compares the average execution time of cracking passwords using different hash algorithms including MD5, SHA-1, SHA-256, SHA-512."
 				/>
-				<JobExperience
-					role="Grad Commitee Memeber"
-					company="Engineering Class of 2026"
-					city="MUN"
-					date="Jan 2025 - Present"
-					description="I am a memeber of my classe's graduation commitee. Myself and the rest of the commitee plan and coordinate gradution related events including the iron ring ceremony and celebration gala. We also coordinate social events and fundraisers for the class."
+				<Project
+				name="TripTailor"
+				subtitle="Software Development Final Project"
+				url="https://github.com/jordyob03/TripTailor"
+				description="For our software development project, myself and eight other students developed a Pinterest inspired travel planning web application. The app allows users to share activities they enjoyed from their vacation and recommends itineraies to users based on their interests."
 				/>
 				</section>
 
