@@ -7,22 +7,19 @@ interface Props {
   date: string;
   description: string;
 }
-const { role, company, companyUrl, city, date, description } = Astro.props;
+const {company, companyUrl, date, description } = Astro.props;
 ---
 
 <div class="job-experience pl-3 mb-4 border-l-2 border-blue-400 bg-gray-50 rounded">
-  <h4 class="text-lg font-medium">{role}</h4>
-  <p class="text-xs text-gray-600">
-    <a 
+  <h4 class="text-lg font-medium"><a 
       href={companyUrl} 
       target="_blank" 
       rel="noopener noreferrer" 
       class="text-blue-600 font-semibold no-underline hover:text-blue-700"
     >
       {company}
-    </a>
-    • {city}
-  </p>
+    </a></h4>
+
   <p class="text-xs text-gray-600">{date}</p>
   <p class="mt-1 text-sm text-gray-700">{description}</p>
 </div>

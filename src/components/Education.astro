@@ -1,0 +1,30 @@
+
+---
+interface Props {
+  school: string;
+  degree: string;
+  date: string;
+  description: string;
+}
+
+const { school, degree, date, description } = Astro.props;
+---
+
+<div class="job-experience pl-3 mb-4 border-l-2 border-blue-400 bg-gray-50 rounded">
+  <h4 class="text-lg font-medium">
+    {school}
+  </h4>
+
+  <p class="text-sm font-semibold text-gray-700">
+    {degree}
+  </p>
+
+  <p class="text-xs text-gray-600">
+    {date}
+  </p>
+
+  <p class="mt-1 text-sm text-gray-700">
+    {description}
+  </p>
+</div>
+

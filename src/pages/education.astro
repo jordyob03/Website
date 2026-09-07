@@ -1,0 +1,63 @@
+
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION } from '../consts';
+import Education from '../components/Education.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Education" description={SITE_DESCRIPTION} />
+	</head>
+
+	<body>
+		<Header />
+
+		<main>
+			<div class="prose">
+
+				<section>
+
+					<h2>Education</h2>
+
+					<Education
+						school="University of Toronto"
+						degree="Master of Applied Science in Computer Engineering"
+						date="August 2026 - May 2028"
+						description="Currently focused on AI security research in the TOSS lab under Dr. David Lie's supervision."
+					/>
+
+					<Education
+						school="Memorial University of Newfoundland"
+						degree="Bachelor of Engineering in Computer Engineering, GPA: 3.95 / 4.00"
+						date="September 2021 - May 2026"
+						description="Completed the program along with 6 co-op internships where I focused on simulation and video game development."
+					/>
+
+				</section>
+
+				<section style="padding-top: 48px">
+
+					<h2>Awards</h2>
+
+					<ul>
+                        <li>MUN Faculty of Engineering Dean's List — 2021 - 2026</li>
+                        <li>MUN Engineering Most Valuable Tutor — 2026</li>
+                        <li>General Motors Scholarship in Engineering — 2026</li>
+						<li>TechNL Making Waves Innovator Scholarship — 2024</li>
+						<li>NASDAQ Verafin Computer Engineering Scholarship — 2022</li>
+						<li>Freedom Foods Employee Scholarship — 2021</li>
+					</ul>
+
+				</section>
+
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
