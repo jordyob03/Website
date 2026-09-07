@@ -1,0 +1,68 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import JobExperience from '../components/Experience.astro';
+import Project from '../components/Project.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Experience" description={SITE_DESCRIPTION} />
+	</head>
+
+	<body>
+		<Header />
+
+		<main>
+			<div class="prose">
+
+				<section>
+
+					<h2>Internships</h2>
+
+					<JobExperience
+						role="Software Developer Intern"
+						company="Avalon Holographics"
+						companyUrl="https://avalonholographics.com/"
+						city="St. John's, NL"
+						date="Sep 2023 – Dec 2023, Sep 2025 - December 2025"
+						description="I developed 3D simulators and video games for Avalon's holographic displays."
+					/>
+
+					<JobExperience
+						role="Full Stack Developer"
+						company="FliteX"
+						companyUrl="https://ca.linkedin.com/company/flitex"
+						city="Remote/Toronto, ON"
+						date="Jan 2025 - Apr 2025"
+						description="I worked with FliteX and researchers from UCalgary on a flightpath simulator to optimize commericial flight routes."
+					/>
+
+					<JobExperience
+						role="Research/Software Development Intern"
+						company="Communications Research Centre (CRC)"
+						companyUrl="https://ised-isde.canada.ca/site/communications-research-centre-canada/en"
+						city="Ottawa, ON"
+						date="May 2024 - Aug 2024"
+						description="While with the CRC I assisted researchers by developing a web application to visualize interference patterns in 5G networks."
+					/>
+
+					<JobExperience
+						role="Network Specialist Intern"
+						company="Bell"
+						companyUrl="https://www.bell.ca/"
+						city="St. John's, NL"
+						date="Jan 2023 - May 2023"
+						description="I assited the expansion of Bell's fibre optic network across Newfoundland by automating data entry processes."
+					/>
+				</section>
+
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>
